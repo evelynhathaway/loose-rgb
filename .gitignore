@@ -1,0 +1,16 @@
+# Node
+node_modules
+
+# IDE
+\.idea/
+\.vscode/
+
+# Built files
+/build
+/lib
+
+# Other
+.cache
+/*.log
+*.lock
+.DS_Store
