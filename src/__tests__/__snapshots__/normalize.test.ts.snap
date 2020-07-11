@@ -10,7 +10,7 @@ Object {
 
 exports[`normalize "#FFBB00AA" 1`] = `
 Object {
-  "a": 170,
+  "a": 0.66796875,
   "b": 0,
   "g": 187,
   "r": 255,
@@ -35,7 +35,7 @@ Object {
 
 exports[`normalize "FFFF" 1`] = `
 Object {
-  "a": 255,
+  "a": 1,
   "b": 255,
   "g": 255,
   "r": 255,

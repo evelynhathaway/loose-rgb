@@ -41,7 +41,7 @@ export function toArray ({r, g, b, a}: MarkOptional<RGBALowerKeys, "a">): RGBArr
 export function toHex<InputRGBA extends RGBALowerKeys>(input: InputRGBA): RGBAHex;
 export function toHex<InputRGB extends RGBLowerKeys>(input: InputRGB): RGBHex;
 export function toHex ({r, g, b, a: aFloat}: MarkOptional<RGBALowerKeys, "a">): RGBHex | RGBAHex {
-	const aInt = aFloat && Math.round(aFloat * 256);
+	const aInt = aFloat && Math.ceil(aFloat * 256) - 1;
 	const [rHex, gHex, bHex, aHex] = [r, g, b, aInt].map((num) => {
 		if (num === undefined) return "";
 		const hex = num.toString(16);

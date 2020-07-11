@@ -25,6 +25,7 @@ import {
 } from "./helpers";
 import {convert} from ".";
 
+
 /*
 	Normalizing
 */
@@ -54,10 +55,7 @@ export function normalize (input: RGBUnknown): RGBLowerKeys | RGBALowerKeys {
 		return convert.toLowerKeys({r, g, b});
 	}
 	if (isRGBACSSValue(input)) {
-		const [, r, g, b, a] = regexRGBACSSValue.exec(input)!.map((num, index) => (
-			// Parse float for alpha
-			index === 4 ? Number.parseFloat(num) : parseDec(num)
-		));
+		const [, r, g, b, a] = regexRGBACSSValue.exec(input)!.map(parseDec);
 		return convert.toLowerKeys({r, g, b, a});
 	}
 	if (isRGBHex(input)) {
@@ -69,11 +67,11 @@ export function normalize (input: RGBUnknown): RGBLowerKeys | RGBALowerKeys {
 		return convert.toLowerKeys({r, g, b, a});
 	}
 	if (isRGBHexShort(input)) {
-		const [, r, g, b] = regexRGBHexShort.exec(input)!.map((num) => parseHex(num.repeat(2)));
+		const [, r, g, b] = regexRGBHexShort.exec(input)!.map((num, index) => parseHex(num.repeat(2), index));
 		return convert.toLowerKeys({r, g, b});
 	}
 	if (isRGBAHexShort(input)) {
-		const [, r, g, b, a] = regexRGBAHexShort.exec(input)!.map((num) => parseHex(num.repeat(2)));
+		const [, r, g, b, a] = regexRGBAHexShort.exec(input)!.map((num, index) => parseHex(num.repeat(2), index));
 		return convert.toLowerKeys({r, g, b, a});
 	}
 

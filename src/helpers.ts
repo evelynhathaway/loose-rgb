@@ -55,8 +55,15 @@ export type RGBTypeName = "LowerKeys" | "UpperKeys" | "FullKeys" | "Array" | "He
 export const includesKeys = (source: Array<string>, target: Object): boolean => (
 	source.every((key) => Object.keys(target).includes(key))
 );
-export const parseDec = (num: string): number => Number.parseInt(num, 10);
-export const parseHex = (num: string): number => Number.parseInt(num, 16);
+export const parseDec = (num: string, index: number): number => (
+	// Parse float for alpha
+	index === 4 ? Number.parseFloat(num) : Number.parseInt(num, 10)
+);
+export const parseHex = (num: string, index: number): number => {
+	const numInt = Number.parseInt(num, 16);
+	// Convert to float for alpha
+	return index === 4 ? (numInt + 1) / 256 : numInt;
+};
 
 
 /*
