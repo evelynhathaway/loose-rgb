@@ -13,11 +13,14 @@
 
 ## Description
 
-TODO
+Working with different color libraries gets cumbersome when they use different RGB value formats. Now you can `normalize` the outputs and `convert` your inputs.
 
 ## Features
 
-- TODO
+- Normalize any RGB format to `{r, g, b, [a]}`
+- Convert `{r, g, b, [a]}` to any RGB format
+- RGBA support
+- Hex support
 
 ## Installation
 
@@ -27,7 +30,23 @@ npm install loose-rgb
 
 ## Usage
 
-TODO
+```js
+import looseRGB from "loose-rgb";
+
+// Convert any type to `{r, g, b, [a]}`
+looseRGB.normalize({red: 1, green: 2, blue: 3}) // ? {r: 1, g: 2, b: 3}
+looseRGB.normalize("FFBB00AA") // ? {r: 255, g: 187, b: 0, a: 0.66796875}
+
+// Convert `{r, g, b, [a]}` to any type
+looseRGB.convert.toCSSValue({r: 255, g: 187, b: 0, a: 0.66796875}) // ? rgba(255, 187, 0, 0.66796875)
+looseRGB.convert.toUpperKeys({r: 1, g: 2, b: 3}) // ? {R: 1, G: 2, B: 3}
+
+// Composing the above methods
+import {convert, normalize} from "loose-rgb";
+
+const anyToHex = (rgba) => convert.toHex(normalize(rgba));
+anyToHex([1, 2, 3, 0.4]) // ? #01020366
+```
 
 ## License
 
