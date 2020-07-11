@@ -7,10 +7,7 @@ module.exports = {
 	collectCoverage: true,
 	collectCoverageFrom: [
 		"src/**/*",
-	],
-	coveragePathIgnorePatterns: [
-		"\\\\node_modules\\\\",
-		"\\\\__tests__\\\\",
+		"!**/__tests__/**/*",
 	],
 	coverageThreshold: {
 		global: {
