@@ -10,7 +10,7 @@ module.exports = {
 	],
 	coveragePathIgnorePatterns: [
 		"\\\\node_modules\\\\",
-		"\\__tests__\\",
+		"\\\\__tests__\\\\",
 	],
 	coverageThreshold: {
 		global: {
