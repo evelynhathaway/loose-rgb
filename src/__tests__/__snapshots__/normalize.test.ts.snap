@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`normalize "#000000" 1`] = `
+Object {
+  "b": 0,
+  "g": 0,
+  "r": 0,
+}
+`;
+
+exports[`normalize "#FFBB00AA" 1`] = `
+Object {
+  "a": 170,
+  "b": 0,
+  "g": 187,
+  "r": 255,
+}
+`;
+
+exports[`normalize "#fff" 1`] = `
+Object {
+  "b": 255,
+  "g": 255,
+  "r": 255,
+}
+`;
+
+exports[`normalize "123" 1`] = `
+Object {
+  "b": 51,
+  "g": 34,
+  "r": 17,
+}
+`;
+
+exports[`normalize "FFFF" 1`] = `
+Object {
+  "a": 255,
+  "b": 255,
+  "g": 255,
+  "r": 255,
+}
+`;
+
+exports[`normalize "rgb(0, 213, 34)" 1`] = `
+Object {
+  "b": 34,
+  "g": 213,
+  "r": 0,
+}
+`;
+
+exports[`normalize "rgba(0, 213, 34,.12)" 1`] = `
+Object {
+  "a": 0.12,
+  "b": 34,
+  "g": 213,
+  "r": 0,
+}
+`;
+
+exports[`normalize [1, 2, 3, 0.4] 1`] = `
+Object {
+  "a": 0.4,
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;
+
+exports[`normalize [1, 2, 3] 1`] = `
+Object {
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;
+
+exports[`normalize {"A": 0.4, "B": 3, "G": 2, "R": 1} 1`] = `
+Object {
+  "a": 0.4,
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;
+
+exports[`normalize {"B": 3, "G": 2, "R": 1} 1`] = `
+Object {
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;
+
+exports[`normalize {"a": 0.4, "b": 3, "g": 2, "r": 1} 1`] = `
+Object {
+  "a": 0.4,
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;
+
+exports[`normalize {"alpha": 0.4, "blue": 3, "green": 2, "red": 1} 1`] = `
+Object {
+  "a": 0.4,
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;
+
+exports[`normalize {"b": 3, "g": 2, "r": 1} 1`] = `
+Object {
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;
+
+exports[`normalize {"blue": 3, "green": 2, "red": 1} 1`] = `
+Object {
+  "b": 3,
+  "g": 2,
+  "r": 1,
+}
+`;

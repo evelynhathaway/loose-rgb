@@ -31,8 +31,8 @@ export interface RGBAFullKeys extends RGBFullKeys {
 	alpha: number;
 }
 
-export type RGBArray = [number, number, number]
-export type RGBAArray = [number, number, number, number]
+export type RGBArray = [number, number, number] | Array<number>;
+export type RGBAArray = [number, number, number, number] | Array<number>;
 
 export type RGBCSSValue = string;
 export type RGBACSSValue = string;
@@ -63,8 +63,9 @@ export const parseHex = (num: string): number => Number.parseInt(num, 16);
 	Regular Expressions
 */
 export const regCSSNum = "\\s*(\\d+)\\s*";
+export const regCSSFloatNum = "\\s*(\\d?\\.?\\d+)\\s*";
 export const regexRGBCSSValue = new RegExp(`^rgb\\(${regCSSNum},${regCSSNum},${regCSSNum}\\)$`, "i");
-export const regexRGBACSSValue = new RegExp(`^rgba\\(${regCSSNum},${regCSSNum},${regCSSNum},${regCSSNum}\\)$`, "i");
+export const regexRGBACSSValue = new RegExp(`^rgba\\(${regCSSNum},${regCSSNum},${regCSSNum},${regCSSFloatNum}\\)$`, "i");
 
 export const regHexNum = "([\\dA-F]{2})";
 export const regHexShortNum = "([\\dA-F])";

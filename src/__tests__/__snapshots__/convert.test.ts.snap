@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convert toArray {"a": 0, "b": 2, "g": 1, "r": 0} 1`] = `
+Array [
+  0,
+  1,
+  2,
+]
+`;
+
+exports[`convert toArray {"a": 0.95, "b": 16, "g": 101, "r": 255} 1`] = `
+Array [
+  255,
+  101,
+  16,
+  0.95,
+]
+`;
+
+exports[`convert toArray {"b": 2, "g": 1, "r": 0} 1`] = `
+Array [
+  0,
+  1,
+  2,
+]
+`;
+
+exports[`convert toArray {"b": 16, "g": 101, "r": 255} 1`] = `
+Array [
+  255,
+  101,
+  16,
+]
+`;
+
+exports[`convert toCSSValue {"a": 0, "b": 2, "g": 1, "r": 0} 1`] = `"rgb(0, 1, 2)"`;
+
+exports[`convert toCSSValue {"a": 0.95, "b": 16, "g": 101, "r": 255} 1`] = `"rgba(255, 101, 16, 0.95)"`;
+
+exports[`convert toCSSValue {"b": 2, "g": 1, "r": 0} 1`] = `"rgb(0, 1, 2)"`;
+
+exports[`convert toCSSValue {"b": 16, "g": 101, "r": 255} 1`] = `"rgb(255, 101, 16)"`;
+
+exports[`convert toFullKeys {"a": 0, "b": 2, "g": 1, "r": 0} 1`] = `
+Object {
+  "blue": 2,
+  "green": 1,
+  "red": 0,
+}
+`;
+
+exports[`convert toFullKeys {"a": 0.95, "b": 16, "g": 101, "r": 255} 1`] = `
+Object {
+  "alpha": 0.95,
+  "blue": 16,
+  "green": 101,
+  "red": 255,
+}
+`;
+
+exports[`convert toFullKeys {"b": 2, "g": 1, "r": 0} 1`] = `
+Object {
+  "blue": 2,
+  "green": 1,
+  "red": 0,
+}
+`;
+
+exports[`convert toFullKeys {"b": 16, "g": 101, "r": 255} 1`] = `
+Object {
+  "blue": 16,
+  "green": 101,
+  "red": 255,
+}
+`;
+
+exports[`convert toHex {"a": 0, "b": 2, "g": 1, "r": 0} 1`] = `"#00010200"`;
+
+exports[`convert toHex {"a": 0.95, "b": 16, "g": 101, "r": 255} 1`] = `"#ff6510f3"`;
+
+exports[`convert toHex {"b": 2, "g": 1, "r": 0} 1`] = `"#000102"`;
+
+exports[`convert toHex {"b": 16, "g": 101, "r": 255} 1`] = `"#ff6510"`;
+
+exports[`convert toLowerKeys {"a": 0, "b": 2, "g": 1, "r": 0} 1`] = `
+Object {
+  "b": 2,
+  "g": 1,
+  "r": 0,
+}
+`;
+
+exports[`convert toLowerKeys {"a": 0.95, "b": 16, "g": 101, "r": 255} 1`] = `
+Object {
+  "a": 0.95,
+  "b": 16,
+  "g": 101,
+  "r": 255,
+}
+`;
+
+exports[`convert toLowerKeys {"b": 2, "g": 1, "r": 0} 1`] = `
+Object {
+  "b": 2,
+  "g": 1,
+  "r": 0,
+}
+`;
+
+exports[`convert toLowerKeys {"b": 16, "g": 101, "r": 255} 1`] = `
+Object {
+  "b": 16,
+  "g": 101,
+  "r": 255,
+}
+`;
+
+exports[`convert toUpperKeys {"a": 0, "b": 2, "g": 1, "r": 0} 1`] = `
+Object {
+  "B": 2,
+  "G": 1,
+  "R": 0,
+}
+`;
+
+exports[`convert toUpperKeys {"a": 0.95, "b": 16, "g": 101, "r": 255} 1`] = `
+Object {
+  "A": 0.95,
+  "B": 16,
+  "G": 101,
+  "R": 255,
+}
+`;
+
+exports[`convert toUpperKeys {"b": 2, "g": 1, "r": 0} 1`] = `
+Object {
+  "B": 2,
+  "G": 1,
+  "R": 0,
+}
+`;
+
+exports[`convert toUpperKeys {"b": 16, "g": 101, "r": 255} 1`] = `
+Object {
+  "B": 16,
+  "G": 101,
+  "R": 255,
+}
+`;

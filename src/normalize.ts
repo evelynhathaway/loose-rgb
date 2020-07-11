@@ -1,4 +1,28 @@
-import {RGB, RGBLowerKeys, RGBA, RGBALowerKeys, isRGBLowerKeys, isRGBUpperKeys, isRGBFullKeys, isRGBArray, isRGBCSSValue, regexRGBCSSValue, parseDec, isRGBACSSValue, regexRGBACSSValue, isRGBHex, regexRGBHex, parseHex, isRGBAHex, regexRGBAHex, isRGBHexShort, regexRGBHexShort, isRGBAHexShort, regexRGBAHexShort, RGBUnknown} from "./helpers";
+import {
+	RGB,
+	RGBLowerKeys,
+	RGBA,
+	RGBALowerKeys,
+	isRGBLowerKeys,
+	isRGBUpperKeys,
+	isRGBFullKeys,
+	isRGBArray,
+	isRGBCSSValue,
+	regexRGBCSSValue,
+	parseDec,
+	isRGBACSSValue,
+	regexRGBACSSValue,
+	isRGBHex,
+	regexRGBHex,
+	parseHex,
+	isRGBAHex,
+	regexRGBAHex,
+	isRGBHexShort,
+	regexRGBHexShort,
+	isRGBAHexShort,
+	regexRGBAHexShort,
+	RGBUnknown,
+} from "./helpers";
 import {convert} from ".";
 
 /*
@@ -7,6 +31,7 @@ import {convert} from ".";
 export function normalize<InputRGBA extends RGBA>(input: InputRGBA): RGBALowerKeys;
 export function normalize<InputRGB extends RGB>(input: InputRGB): RGBLowerKeys;
 export function normalize<InputRGBA extends string>(input: InputRGBA): RGBLowerKeys | RGBALowerKeys;
+export function normalize (input: RGBUnknown): RGBLowerKeys | RGBALowerKeys;
 export function normalize (input: RGBUnknown): RGBLowerKeys | RGBALowerKeys {
 	if (isRGBLowerKeys(input)) {
 		const {r, g, b, a} = input;
@@ -29,7 +54,10 @@ export function normalize (input: RGBUnknown): RGBLowerKeys | RGBALowerKeys {
 		return convert.toLowerKeys({r, g, b});
 	}
 	if (isRGBACSSValue(input)) {
-		const [, r, g, b, a] = regexRGBACSSValue.exec(input)!.map(parseDec);
+		const [, r, g, b, a] = regexRGBACSSValue.exec(input)!.map((num, index) => (
+			// Parse float for alpha
+			index === 4 ? Number.parseFloat(num) : parseDec(num)
+		));
 		return convert.toLowerKeys({r, g, b, a});
 	}
 	if (isRGBHex(input)) {
@@ -41,13 +69,13 @@ export function normalize (input: RGBUnknown): RGBLowerKeys | RGBALowerKeys {
 		return convert.toLowerKeys({r, g, b, a});
 	}
 	if (isRGBHexShort(input)) {
-		const [, r, g, b] = regexRGBHexShort.exec(input)!.map((num) => parseHex(num) * 2);
+		const [, r, g, b] = regexRGBHexShort.exec(input)!.map((num) => parseHex(num.repeat(2)));
 		return convert.toLowerKeys({r, g, b});
 	}
 	if (isRGBAHexShort(input)) {
-		const [, r, g, b, a] = regexRGBAHexShort.exec(input)!.map((num) => parseHex(num) * 2);
+		const [, r, g, b, a] = regexRGBAHexShort.exec(input)!.map((num) => parseHex(num.repeat(2)));
 		return convert.toLowerKeys({r, g, b, a});
 	}
 
-	throw new Error("The input into `looseRGB.normalize` wasn't a recognized RGB type");
+	throw new Error("The input into `looseRGB.normalize` wasn't a recognized RGB type.");
 }
