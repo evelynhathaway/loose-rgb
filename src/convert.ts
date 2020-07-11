@@ -29,11 +29,11 @@ export function toHex<InputRGBA extends RGBALowerKeys>(input: InputRGBA): RGBAHe
 export function toHex<InputRGB extends RGBLowerKeys>(input: InputRGB): RGBHex;
 export function toHex ({r, g, b, a}: MarkOptional<RGBALowerKeys, "a">): RGBHex | RGBAHex {
 	const [rHex, gHex, bHex, aHex] = [r, g, b, a].map((num) => {
-		if (num === undefined) return;
+		if (num === undefined) return "";
 		const hex = num.toString(16);
 		return hex.length === 1 ? `0${hex}` : hex;
 	});
-	return a ? `#${rHex!}${gHex!}${bHex!}${aHex!}` : `#${rHex!}${gHex!}${bHex!}`;
+	return `#${rHex}${gHex}${bHex}${aHex}`;
 }
 export function toCSSValue<InputRGBA extends RGBALowerKeys>(input: InputRGBA): RGBACSSValue;
 export function toCSSValue<InputRGB extends RGBLowerKeys>(input: InputRGB): RGBCSSValue;
