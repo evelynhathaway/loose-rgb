@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es5",
+		"module": "esnext",
+		"target": "esnext",
 		"lib": [
 			"dom",
 			"esnext"
@@ -10,13 +10,15 @@
 		"isolatedModules": true,
 		"esModuleInterop": true,
 		"outDir": "lib",
-		"declaration": true
+		"moduleResolution": "node",
+		"declaration": true,
+		"emitDeclarationOnly": true,
 	},
 	"include": [
-		"src"
+		"src",
 	],
 	"exclude": [
 		"node_modules",
 		"lib",
-	]
+	],
 }
