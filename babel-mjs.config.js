@@ -13,7 +13,6 @@ module.exports = {
 			"@babel/preset-env",
 			{
 				"targets": {
-					"browsers": false,
 					"esmodules": true,
 				},
 				"modules": false,
