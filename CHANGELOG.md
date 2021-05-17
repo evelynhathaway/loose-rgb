@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.4
+
+**[`v1.0.3...v1.0.4`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.3...v1.0.4)** - **2021-05-17**
+
+### 📄 Documentation
+
+- **readme:** Update badges [`781623e`](https://github.com/evelynhathaway/loose-rgb/commit/781623e)
+
 ## v1.0.3
 
 **[`v1.0.2...v1.0.3`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.2...v1.0.3)** - **2021-05-17**
