@@ -1,17 +1,23 @@
 # Node
-node_modules
+node_modules/
 
 # IDE
-\.idea/
-\.vscode/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# Built files
-/build
+# Built
+/dist
 /lib
+
+# Testing
+/coverage
 
 # Other
 .cache
 /*.log
 *.lock
 .DS_Store
-coverage/
