@@ -22,6 +22,17 @@ module.exports = {
 			"extends": [
 				"plugin:evelyn/typescript",
 			],
+			"rules": {
+				"unicorn/no-array-callback-reference": "warn",
+			},
+		},
+		{
+			"files": [
+				"./*.js",
+			],
+			"rules": {
+				"unicorn/prefer-module": "off",
+			},
 		},
 	],
 };
