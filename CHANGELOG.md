@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.6
+
+**[`v1.0.5...v1.0.6`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.5...v1.0.6)** - **2021-05-18**
+
+### 📦 Package
+
+- **dev:** npm update [`660a2f3`](https://github.com/evelynhathaway/loose-rgb/commit/660a2f3)
+
 ## v1.0.5
 
 **[`v1.0.4...v1.0.5`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.4...v1.0.5)** - **2021-05-18**
