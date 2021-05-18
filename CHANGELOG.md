@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.5
+
+**[`v1.0.4...v1.0.5`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.4...v1.0.5)** - **2021-05-18**
+
+### 📦 Package
+
+- **npm:** Bump @babel/cli from 7.13.16 to 7.14.3 [`7942f3d`](https://github.com/evelynhathaway/loose-rgb/commit/7942f3d)
+- **npm:** Bump @babel/core from 7.14.2 to 7.14.3 [`2ab1bca`](https://github.com/evelynhathaway/loose-rgb/commit/2ab1bca)
+- **npm:** Bump @typescript-eslint/eslint-plugin [`f4d7ba0`](https://github.com/evelynhathaway/loose-rgb/commit/f4d7ba0)
+- **npm:** Bump @typescript-eslint/parser from 4.23.0 to 4.24.0 [`4a00a80`](https://github.com/evelynhathaway/loose-rgb/commit/4a00a80)
+- **npm:** Bump conventional-changelog-evelyn from 1.2.2 to 1.2.3 [`a59ed23`](https://github.com/evelynhathaway/loose-rgb/commit/a59ed23)
+
 ## v1.0.4
 
 **[`v1.0.3...v1.0.4`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.3...v1.0.4)** - **2021-05-17**
