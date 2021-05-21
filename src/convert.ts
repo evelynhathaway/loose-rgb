@@ -12,7 +12,7 @@ import {
 	RGBAHex,
 	RGBCSSValue,
 	RGBACSSValue,
-} from "./helpers";
+} from "./helpers.js";
 
 
 /*
@@ -42,9 +42,9 @@ export function toHex<InputRGBA extends RGBALowerKeys>(input: InputRGBA): RGBAHe
 export function toHex<InputRGB extends RGBLowerKeys>(input: InputRGB): RGBHex;
 export function toHex ({r, g, b, a: aFloat}: MarkOptional<RGBALowerKeys, "a">): RGBHex | RGBAHex {
 	const aInt = aFloat && Math.ceil(aFloat * 256) - 1;
-	const [rHex, gHex, bHex, aHex] = [r, g, b, aInt].map((num) => {
-		if (num === undefined) return "";
-		const hex = num.toString(16);
+	const [rHex, gHex, bHex, aHex] = [r, g, b, aInt].map((number) => {
+		if (number === undefined) return "";
+		const hex = number.toString(16);
 		return hex.length === 1 ? `0${hex}` : hex;
 	});
 	return `#${rHex}${gHex}${bHex}${aHex}`;

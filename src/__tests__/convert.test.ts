@@ -1,5 +1,5 @@
-import {convert} from "..";
-import {RGBUnknown} from "../helpers";
+import {RGBUnknown} from "../helpers.js";
+import {convert} from "../index.js";
 
 
 interface GenericConvert {

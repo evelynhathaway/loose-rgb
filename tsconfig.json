@@ -1,21 +1,20 @@
 {
 	"compilerOptions": {
-		"module": "esnext",
-		"target": "es6",
+		"module": "es2020",
+		"target": "es2020",
 		"lib": [
 			"dom",
 			"esnext"
 		],
 		"strict": true,
-		"isolatedModules": true,
 		"esModuleInterop": true,
 		"outDir": "lib",
 		"moduleResolution": "node",
 		"declaration": true,
-		"emitDeclarationOnly": true,
 	},
 	"include": [
 		"src",
+		"config",
 	],
 	"exclude": [
 		"node_modules",

@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function wallabyConfig () {
 	return {
 		autoDetect: true,
 		hints: {
@@ -6,5 +6,10 @@ module.exports = function () {
 		},
 		reportConsoleErrorAsError: true,
 		lowCoverageThreshold: 99,
+		env: {
+			params: {
+				runner: "--experimental-vm-modules",
+			},
+		},
 	};
-};
+}
