@@ -55,31 +55,31 @@ export type RGBTypeName = "LowerKeys" | "UpperKeys" | "FullKeys" | "Array" | "He
 export const includesKeys = (source: Array<string>, target: Object): boolean => (
 	source.every((key) => Object.keys(target).includes(key))
 );
-export const parseDec = (num: string, index: number): number => (
+export const parseDec = (number: string, index: number): number => (
 	// Parse float for alpha
-	index === 4 ? Number.parseFloat(num) : Number.parseInt(num, 10)
+	index === 4 ? Number.parseFloat(number) : Number.parseInt(number, 10)
 );
-export const parseHex = (num: string, index: number): number => {
-	const numInt = Number.parseInt(num, 16);
+export const parseHex = (number: string, index: number): number => {
+	const numberInt = Number.parseInt(number, 16);
 	// Convert to float for alpha
-	return index === 4 ? (numInt + 1) / 256 : numInt;
+	return index === 4 ? (numberInt + 1) / 256 : numberInt;
 };
 
 
 /*
 	Regular Expressions
 */
-export const regCSSNum = "\\s*(\\d+)\\s*";
-export const regCSSFloatNum = "\\s*(\\d?\\.?\\d+)\\s*";
-export const regexRGBCSSValue = new RegExp(`^rgb\\(${regCSSNum},${regCSSNum},${regCSSNum}\\)$`, "i");
-export const regexRGBACSSValue = new RegExp(`^rgba\\(${regCSSNum},${regCSSNum},${regCSSNum},${regCSSFloatNum}\\)$`, "i");
+export const regCSSNumber = "\\s*(\\d+)\\s*";
+export const regCSSFloatNumber = "\\s*(\\d?\\.?\\d+)\\s*";
+export const regexRGBCSSValue = new RegExp(`^rgb\\(${regCSSNumber},${regCSSNumber},${regCSSNumber}\\)$`, "i");
+export const regexRGBACSSValue = new RegExp(`^rgba\\(${regCSSNumber},${regCSSNumber},${regCSSNumber},${regCSSFloatNumber}\\)$`, "i");
 
-export const regHexNum = "([\\dA-F]{2})";
-export const regHexShortNum = "([\\dA-F])";
-export const regexRGBHexShort = new RegExp(`^#?${regHexShortNum}${regHexShortNum}${regHexShortNum}$`, "i");
-export const regexRGBAHexShort = new RegExp(`^#?${regHexShortNum}${regHexShortNum}${regHexShortNum}${regHexShortNum}$`, "i");
-export const regexRGBHex = new RegExp(`^#?${regHexNum}${regHexNum}${regHexNum}$`, "i");
-export const regexRGBAHex = new RegExp(`^#?${regHexNum}${regHexNum}${regHexNum}${regHexNum}$`, "i");
+export const regHexNumber = "([\\dA-F]{2})";
+export const regHexShortNumber = "([\\dA-F])";
+export const regexRGBHexShort = new RegExp(`^#?${regHexShortNumber}${regHexShortNumber}${regHexShortNumber}$`, "i");
+export const regexRGBAHexShort = new RegExp(`^#?${regHexShortNumber}${regHexShortNumber}${regHexShortNumber}${regHexShortNumber}$`, "i");
+export const regexRGBHex = new RegExp(`^#?${regHexNumber}${regHexNumber}${regHexNumber}$`, "i");
+export const regexRGBAHex = new RegExp(`^#?${regHexNumber}${regHexNumber}${regHexNumber}${regHexNumber}$`, "i");
 
 
 /*

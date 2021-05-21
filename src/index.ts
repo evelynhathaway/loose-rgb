@@ -1,4 +1,4 @@
-export * as convert from "./convert";
-export {normalize} from "./normalize";
+export * as convert from "./convert.js";
+export {normalize} from "./normalize.js";
 
-export * as helpers from "./helpers";
+export * as helpers from "./helpers.js";

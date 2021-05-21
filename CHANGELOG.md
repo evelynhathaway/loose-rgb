@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.0.0-beta.1
+
+**[`v1.0.6...v2.0.0-beta.1`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.6...v2.0.0-beta.1)** - **2021-05-21**
+
+### 💥 Breaking
+
+- Support ESM only, rename num to number [`f5ce597`](https://github.com/evelynhathaway/loose-rgb/commit/f5ce597)
+
+### Other
+
+- **dev:** Bump conventional-changelog-evelyn from 1.2.3 to 1.3.0 [`358777c`](https://github.com/evelynhathaway/loose-rgb/commit/358777c)
+- **dev:** Bump eslint-plugin-evelyn from 5.0.4 to 5.0.5 [`640ac4b`](https://github.com/evelynhathaway/loose-rgb/commit/640ac4b)
+
 ## v1.0.6
 
 **[`v1.0.5...v1.0.6`](https://github.com/evelynhathaway/loose-rgb/compare/v1.0.5...v1.0.6)** - **2021-05-18**

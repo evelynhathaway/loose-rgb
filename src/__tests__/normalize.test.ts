@@ -1,4 +1,4 @@
-import {normalize} from "..";
+import {normalize} from "../index.js";
 
 
 describe("normalize", () => {
@@ -26,8 +26,7 @@ describe("normalize", () => {
 
 	test("throw error if not recognized", () => {
 		expect(() => {
-			// eslint-disable-next-line @typescript-eslint/ban-types
-			(normalize as Function)({r: 1, a: "string"});
+			(normalize as CallableFunction)({r: 1, a: "string"});
 		}).toThrowError("The input into `looseRGB.normalize` wasn't a recognized RGB type.");
 	});
 });

@@ -22,8 +22,8 @@ import {
 	isRGBAHexShort,
 	regexRGBAHexShort,
 	RGBUnknown,
-} from "./helpers";
-import {convert} from ".";
+} from "./helpers.js";
+import {convert} from "./index.js";
 
 
 /*
@@ -67,11 +67,11 @@ export function normalize (input: RGBUnknown): RGBLowerKeys | RGBALowerKeys {
 		return convert.toLowerKeys({r, g, b, a});
 	}
 	if (isRGBHexShort(input)) {
-		const [, r, g, b] = regexRGBHexShort.exec(input)!.map((num, index) => parseHex(num.repeat(2), index));
+		const [, r, g, b] = regexRGBHexShort.exec(input)!.map((number, index) => parseHex(number.repeat(2), index));
 		return convert.toLowerKeys({r, g, b});
 	}
 	if (isRGBAHexShort(input)) {
-		const [, r, g, b, a] = regexRGBAHexShort.exec(input)!.map((num, index) => parseHex(num.repeat(2), index));
+		const [, r, g, b, a] = regexRGBAHexShort.exec(input)!.map((number, index) => parseHex(number.repeat(2), index));
 		return convert.toLowerKeys({r, g, b, a});
 	}
 

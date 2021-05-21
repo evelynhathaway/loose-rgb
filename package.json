@@ -1,6 +1,7 @@
 {
   "name": "loose-rgb",
-  "version": "1.0.6",
+  "type": "module",
+  "version": "2.0.0-beta.1",
   "description": "Normalizes RGB color data types to a certain format",
   "keywords": [
     "rgb",
@@ -21,11 +22,7 @@
   "license": "MIT",
   "author": "Evelyn Hathaway <npm@evelyn.dev> (https://evelyn.dev)",
   "sideEffects": false,
-  "exports": {
-    "default": "./lib/index.js",
-    "import": "./lib/index.mjs",
-    "require": "./lib/index.js"
-  },
+  "exports": "./lib/index.js",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "directories": {
@@ -36,10 +33,7 @@
     "/lib"
   ],
   "scripts": {
-    "build": "npm run build:cjs && npm run build:mjs && npm run build:types",
-    "build:cjs": "babel src -d lib -x .ts --source-maps",
-    "build:mjs": "babel src -d lib --config-file ./babel-mjs.config.js -x .ts --out-file-extension .mjs --source-maps",
-    "build:types": "tsc -p ./tsconfig-build.json",
+    "build": "tsc -p ./tsconfig-build.json",
     "lint": "eslint ./",
     "prepare": "husky install",
     "test": "jest"
@@ -51,45 +45,33 @@
     "**/package.json": "sort-package-json",
     "./": "eslint --fix"
   },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
-  },
   "dependencies": {
     "ts-essentials": "^7.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/plugin-proposal-export-namespace-from": "^7.14.2",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-typescript": "^7.13.0",
-    "@commitlint/prompt": "^12.1.4",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
-    "babel-plugin-add-import-extension": "^1.5.1",
     "commitlint": "^12.1.4",
-    "conventional-changelog-evelyn": "^1.2.2",
+    "conventional-changelog-evelyn": "^1.3.0",
     "eslint": "^7.26.0",
-    "eslint-plugin-evelyn": "^5.0.4",
+    "eslint-plugin-evelyn": "^6.0.2",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-regexp": "^0.10.0",
     "eslint-plugin-unicorn": "^32.0.1",
     "husky": "^6.0.0",
-    "jest": "^26.6.3",
+    "jest": "27.0.0-next.9",
     "lint-staged": "^11.0.0",
     "semantic-release": "^17.4.3",
     "sort-package-json": "^1.50.0",
-    "ts-jest": "^26.5.6",
+    "ts-jest": "27.0.0-next.12",
     "typescript": "^4.2.4"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "release": {
     "extends": "conventional-changelog-evelyn/release.config.js"
