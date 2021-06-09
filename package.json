@@ -1,6 +1,6 @@
 {
   "name": "loose-rgb",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Normalizes RGB color data types to a certain format",
   "keywords": [
     "rgb",
