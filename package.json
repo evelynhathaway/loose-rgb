@@ -52,7 +52,7 @@
     "./": "eslint --fix"
   },
   "dependencies": {
-    "ts-essentials": "^7.0.1"
+    "ts-essentials": "^8.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
